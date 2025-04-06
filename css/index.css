@@ -117,19 +117,19 @@ a {
 }
 
 .hello {
-    max-width: 700px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    padding: 40px;
-    border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
-    animation-name: infinity_backlight;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-  }
-  
+  max-width: 700px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  animation-name: infinity_backlight;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
 
 .hello p {
   margin: 15px 0;
@@ -159,64 +159,209 @@ hr.new {
   border: 1px solid rgb(255, 255, 255);
   /* border-radius: 10px; */
 }
+
 #Work {
-    background-color: #000;
-    padding: 60px 20px;
+  background-color: #000;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #111;
+  border: 2px solid red;
+  border-radius: 12px;
+  max-width: 300px;
+  flex: 1 1 280px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px red;
+}
+
+.card picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+#HorizontalWork {
+  background-color: #000;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.horizontal-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #111;
+  border: 2px solid red;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.horizontal-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 0 10px red;
+}
+
+.card-text h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.card-text p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .horizontal-card {
+    flex-direction: column;
     text-align: center;
   }
-  
-  .section-title {
-    color: white;
-    font-size: 32px;
-    margin-bottom: 40px;
-  }
-  
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .card {
-    background-color: #111;
-    border: 2px solid red;
-    border-radius: 12px;
-    max-width: 300px;
-    flex: 1 1 280px;
-    padding: 20px;
-    color: white;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 15px red;
-  }
-  
-  .card picture img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: black;
+}
+
+.contact-card {
+  background-color: #111;
+  border: 2px solid red;
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.contact-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: white;
+}
+
+.contact-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-card input,
+.contact-card textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+.contact-card input::placeholder,
+.contact-card textarea::placeholder {
+  color: #888;
+}
+
+.contact-card button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-card button:hover {
+  background-color: darkred;
+}
+
+footer.footer {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+  border-top: 2px solid red;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-left p,
+.footer-right p {
+  line-height: 1.6;
+  font-size: 15px;
+  color: #ccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid red;
+  padding-top: 15px;
+  font-weight: bold;
+  color: #fff;
+}
+
 @keyframes infinity_backlight {
-    0% {
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    }
-    50% {
-      border: 2px solid rgba(255, 255, 255, 0.9);
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.5);
-    }
-    100% {
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    }
+  0% {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
   }
-  
+
+  50% {
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+
+  100% {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
