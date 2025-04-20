@@ -1,0 +1,211 @@
+/* Center the scrolling wrapper and its content */
+#sec3 .scrolling-wrapper {
+  display: flex;
+  flex-wrap: nowrap;  /* Keep items in a single row */
+  overflow-x: auto;  /* Horizontal scroll */
+  gap: 20px;         /* Spacing between cards */
+  justify-content: center; /* Center the cards horizontally */
+  padding: 20px; /* Add some padding around */
+}
+
+#sec3 .custom-card {
+  width: 18rem; /* Fixed width for each card */
+  border-radius: 10px; /* Optional: border radius for rounded corners */
+}
+
+#sec3 .card {
+  border: none; /* Optional: remove the border for a cleaner look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect for cards */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#sec3 .card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+#sec3 .card-img-top {
+  border-radius: 10px 10px 0 0; /* Rounded top corners for images */
+}
+
+/* Optional: Make the section full width */
+#sec3 {
+  width: 100%;
+  padding: 50px 0; /* Add some padding to the top and bottom of the section */
+}
+
+/* Mobile-friendly design */
+@media (max-width: 767px) {
+  #sec3 .custom-card {
+    width: 15rem; /* Reduce card size on smaller screens */
+  }
+}
+/* 
+#sec3_1{
+background-color: black;
+}
+.custom-about-card {
+  max-width: 700px;
+  border: 2px solid blue;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.1); /* subtle blue glow 
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.custom-about-card:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 255, 0.3);  stronger blue on hover 
+}
+
+.custom-about-card h1 {
+  font-size: 2.5rem;
+  color: #0044cc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.custom-about-card p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+}
+.skill-item:hover {
+  box-shadow: 0 0 15px rgba(65, 105, 225, 0.4);
+  transform: translateY(-4px);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+} */
+ #sec3 {
+  padding: 2rem 1rem;
+}
+
+#sec3 .scrolling-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  flex-wrap: nowrap !important; /* Force horizontal always */
+}
+
+#sec3 .scrolling-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-card {
+  flex: 0 0 auto;
+  width: 200px;
+  scroll-snap-align: start;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.custom-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.custom-card .card-body {
+  padding: 0.5rem;
+}
+
+.custom-card .card-title {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.custom-card .card-text {
+  font-size: 0.75rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .custom-card {
+    width: 160px;
+  }
+
+  .custom-card img {
+    height: 80px;
+  }
+
+  .custom-card .card-title {
+    font-size: 0.85rem;
+  }
+
+  .custom-card .card-text {
+    font-size: 0.7rem;
+  }
+
+  #sec3 .scrolling-wrapper {
+    flex-wrap: nowrap !important; /* Force horizontal scroll */
+  }
+}
+
+/* blogs */
+#blogs .blog-box {
+  background-color: #1a1a1a;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+#blogs .blog-box:hover {
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+#blogs .stars {
+  font-size: 1.2rem;
+  color: gold;
+  text-shadow: 0 0 5px gold;
+}
+/* researches */
+.research-card {
+  background: linear-gradient(145deg, #1f1f1f, #2c2c2c);
+  border: 1px solid #2f2f2f;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  position: relative;
+}
+
+.research-card:hover {
+  transform: rotateY(6deg) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3), 0 0 15px rgba(0, 255, 255, 0.2);
+  border-color: cyan;
+}
+
+.research-card::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px dashed rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  z-index: -1;
+  transform: translateZ(-1px);
+  border-radius: 15px;
+}
+/* contact */
+.fancy-form {
+  border: 2px solid #0d6efd;
+  transition: all 0.4s ease-in-out;
+}
+
+.fancy-form:hover {
+  box-shadow: 0 0 30px rgba(13, 110, 253, 0.3);
+  transform: translateY(-5px);
+}
+
+.fancy-button {
+  background: linear-gradient(to right, #0d6efd, #6610f2);
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.fancy-button:hover {
+  background: linear-gradient(to right, #6610f2, #0d6efd);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+}

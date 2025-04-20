@@ -181,7 +181,7 @@ hr.new {
 
 .card {
   background-color: #111;
-  border: 2px solid red;
+  border: 2px solid rgb(0, 120, 189);
   border-radius: 12px;
   max-width: 300px;
   flex: 1 1 280px;
@@ -189,11 +189,13 @@ hr.new {
   color: white;
   text-align: center;
   transition: transform 0.3s ease;
+  
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 15px red;
+  box-shadow: 0 0 15px  rgb(0, 120, 189);
+  display: block;
 }
 
 .card picture img {
@@ -235,8 +237,7 @@ hr.new {
 }
 
 .card-text p {
-  font-size: 16px;
-  color: #ccc;
+ display: none;
 }
 
 @media (max-width: 768px) {

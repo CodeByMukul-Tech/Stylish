@@ -1,0 +1,90 @@
+/* Footer Styling */
+#footer {
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+  padding: 50px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+#footer h4 {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+  transition: text-shadow 0.3s ease;
+}
+
+#footer p {
+  font-size: 15px;
+  color: #ccc;
+}
+
+.glowing-text {
+  color: #f8f9fa;
+  text-shadow: 0 0 8px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+  transition: text-shadow 0.3s ease;
+}
+
+.glowing-text-light {
+  color: #ccc;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.glowing-text:hover {
+  text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+}
+
+/* Follow Button Styling */
+.glowing-btn {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.glowing-btn i {
+  margin-right: 8px;
+}
+
+.glowing-btn:hover {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  transform: scale(1.05);
+}
+
+.glowing-btn.me-3 {
+  margin-right: 1rem;
+}
+
+/* Footer Bottom Section Styling */
+#footer .text-center p {
+  font-size: 14px;
+  color: #777;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+/* Hover and transition effects for footer sections */
+#footer .col-md-4:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  #footer h4 {
+    font-size: 20px;
+  }
+  #footer p {
+    font-size: 14px;
+  }
+}
